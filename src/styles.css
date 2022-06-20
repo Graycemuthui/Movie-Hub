@@ -1,3 +1,65 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: beige;
+}
+
+#header-section {
+  position: fixed;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: 18%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background-color: pink;
+}
+
+#logo {
+  color: gray;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px 0 15px 15px;
+  width: 15%;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 2px 5px 11px 5px rgba(29, 26, 26, 0.75)
+}
+
+#logo #logo-span {
+  font-size: 2rem;
+  color: grey;
+  font-family: cursive;
+}
+#movieul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: cursive;
+}
+
+#movieul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#movieul li a {
+  text-decoration: none;
+  border: 1px solid lightblue;
+  color: gray;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  
+}
+
+#movieul li a:hover {
+   color: #333;
+   background-color: transparent;
 }
