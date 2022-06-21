@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   color: beige;
 }
 
@@ -28,7 +28,7 @@ body{
   width: 15%;
   border-radius: 100%;
   text-align: center;
-  box-shadow: 2px 5px 11px 5px rgba(29, 26, 26, 0.75)
+  box-shadow: 2px 5px 11px 5px rgba(29, 26, 26, 0.75);
 }
 
 #logo #logo-span {
@@ -56,10 +56,20 @@ body{
   font-size: 18px;
   border-radius: 10px;
   background-color: #f4f4f4;
-  
 }
 
 #movieul li a:hover {
-   color: #333;
-   background-color: transparent;
+  color: #333;
+  background-color: transparent;
+}
+
+footer {
+  background-color: pink;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-style: italic;
 }

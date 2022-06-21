@@ -34,8 +34,18 @@ import "./styles.css";
 //  })
 // })
 
-
 // fetch(url1)
 // .then((data) => {
 //   data.json().then((value) => console.log('the value', value))
 // })
+
+// const showMovie = () => {
+//   fetch("https://api.tvmaze.com/shows/1")
+//     .then((response) => response.json())
+//     .then((data) => data.image)
+//     .then((val) => val.medium);
+// };
+// // const body = document.querySelector("#body");
+// document.addEventListener("DomcontentLoaded", () => {
+//   showMovie();
+// });
