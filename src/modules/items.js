@@ -39,3 +39,6 @@ export default class Movies {
     });
   };
 }
+
+const title = document.querySelector(".title");
+title.textContent = `Movie (${count}) Hub Movies `;
