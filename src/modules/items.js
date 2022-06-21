@@ -18,7 +18,6 @@ export default class Movies {
     const data = await response.json();
     const movieContainer = document.querySelector(".movie-container");
     const title = document.querySelector(".title");
-    title.textContent = `Movie (${count}) Hub Movies `;
 
     data.forEach((item) => {
       if (item.show.image !== null) {
@@ -39,6 +38,3 @@ export default class Movies {
     });
   };
 }
-
-const title = document.querySelector(".title");
-title.textContent = `Movie (${count}) Hub Movies `;
