@@ -24,11 +24,12 @@ export default class Movies {
       if (item.show.image !== null) {
         const div = document.createElement("div");
         div.classList.add("each-movie");
-        div.innerHTML = `<img src="${item.show.image.medium}" alt="movie-image">
+        div.innerHTML = `
+        <img src="${item.show.image.medium}" alt="movie-image">
       <div class="each">
         <li>${item.show.name}</li>
         <div class="likes">
-          <box-icon color="orange" animation="burst-hover" id=${item.show.id} type="solid" class="like-icon" name='like'></box-icon>
+         <i class="fa-regular fa-heart" ${item.show.id}></i>
           <p>0 Likes</p>
         </div>
       </div>      
