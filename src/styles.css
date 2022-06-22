@@ -50,6 +50,12 @@ body {
   box-shadow: 2px 5px 7px 5px rgba(29, 26, 26, 0.75);
 }
 
+.display-comments li {
+  list-style-type: none;
+  text-align: center;
+  padding: 0.3rem;
+}
+
 .details li:hover {
   background-color: rgb(93, 12, 12);
   transition: 0.3s ease-in-out;
@@ -247,10 +253,14 @@ footer {
   text-align: center;
   width: 25rem;
   color: rgb(232, 128, 128);
+  margin: 0 auto;
 }
 
 .comment {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
