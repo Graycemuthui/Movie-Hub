@@ -1,8 +1,8 @@
-import _ from "lodash";
-import "./styles.css";
-import LikesApi from "./likesApi";
+import './styles.css';
+import LikesApi from './likesApi.js';
 
-import Movies from "../modules/items";
+import Movies from '../modules/items.js';
+
 Movies.displayMovies();
 Movies.counterMovies();
-LikesApi.getLikes()
+LikesApi.getLikes();

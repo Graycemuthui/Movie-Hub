@@ -1,20 +1,20 @@
-import CommentApi from "../src/commentApi";
+import CommentApi from '../src/commentApi.js';
 
-describe("Api testing", () => {
+describe('Api testing', () => {
   const testAray = [
     {
-      comment: "Great content!",
-      creation_date: "2021-02-10",
-      username: "Jane",
+      comment: 'Great content!',
+      creation_date: '2021-02-10',
+      username: 'Jane',
     },
     {
-      comment: "Great Movie!",
-      creation_date: "2021-04-10",
-      username: "John",
+      comment: 'Great Movie!',
+      creation_date: '2021-04-10',
+      username: 'John',
     },
   ];
-  test("Comment Counter", () => {
+  test('Comment Counter', () => {
     const comment = CommentApi.counterComments(testAray);
-     expect(comment).toBe(2);
+    expect(comment).toBe(2);
   });
 });
