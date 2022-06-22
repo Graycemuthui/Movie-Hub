@@ -1,9 +1,9 @@
-import fetch from 'cross-fetch';
-import commentUrl from "../src/commentApi"
-import LikesApi from '../src/likesApi';
+import fetch from "cross-fetch";
+import commentUrl from "../src/commentApi";
+import LikesApi from "../src/likesApi";
 
 export default class Movies {
-  static url = "https://api.tvmaze.com/search/shows?q=space";
+  static url = "https://api.tvmaze.com/search/shows?q=comedy";
   static counterMovies = async () => {
     const response = await fetch(this.url);
     const data = await response.json();
@@ -39,7 +39,8 @@ export default class Movies {
       <button id="${item.show.id}" class="button">Comments</button>`;
         movieContainer.appendChild(div);
       }
-  
+      this.likes();
+      this.addLikes();
     });
     const commentBtns = document.querySelectorAll(".button");
     commentBtns.forEach((btn) => {
@@ -72,7 +73,9 @@ export default class Movies {
                <li><p>Language:</p> <span>${popup.language}</span></li>
                <li> <p>Premiered:</p> <span>${popup.premiered}</span></li>
                <li> <p>Rating:</p> <span>${popup.rating.average}</span></li>
-               <li> <p>Official site:</p> <span><a class="link" href="${popup.officialSite}">Watch</a></span></li>
+               <li> <p>Official site:</p> <span><a class="link" href="${
+                 popup.officialSite
+               }">Watch</a></span></li>
              </ul>  
            </div>
 
@@ -102,53 +105,68 @@ export default class Movies {
 
         document.body.insertAdjacentHTML("beforeend", popupDiv);
         const closeBtn = document.querySelector("#delete");
-        closeBtn.addEventListener('click', () => {
-          document.querySelector('.show-popup').remove()
-        })
+        closeBtn.addEventListener("click", () => {
+          document.querySelector(".show-popup").remove();
+        });
         this.commentCounter(id);
         this.displayComment(id);
       });
     });
-    
-  
   };
-  
-    // comment section 
-    static displayComment = (id) => {
-      const username = document.querySelector('.username');
-      const comment = document.querySelector('.comment');
-      const addCommentBtn = document.querySelector('.add-comment');
-      addCommentBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-  
-        commentUrl.setComments(id, username.value, comment.value)
-          .then((data) => {
-            if (data === 'Created') {
-              this.commentCounter(id);
-              username.value = '';
-              comment.value = '';
-            }
-          });
+
+  // comment section
+  static displayComment = (id) => {
+    const username = document.querySelector(".username");
+    const comment = document.querySelector(".comment");
+    const addCommentBtn = document.querySelector(".add-comment");
+    addCommentBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      commentUrl.setComments(id, username.value, comment.value).then((data) => {
+        if (data === "Created") {
+          this.commentCounter(id);
+          username.value = "";
+          comment.value = "";
+        }
       });
+    });
+  };
 
-    }
-    
+  static commentCounter = (id) => {
+    commentUrl.getComments(id).then((data) => {
+      const display = document.querySelector(".display-comments");
+      const count = document.querySelector(".comment-count");
+      count.textContent = `Comments (${commentUrl.counterComments(data)})`;
+      display.innerHTML = "";
+      data.forEach((item) => {
+        const commentList = document.createElement("li");
 
-    static commentCounter = (id) => {
-      commentUrl.getComments(id).then((data) => {
-        const display = document.querySelector('.display-comments');
-        const count = document.querySelector('.comment-count');
-        count.textContent = `Comments (${commentUrl.counterComments(data)})`;
-        display.innerHTML = '';
-        data.forEach((item) => {
-          const commentList = document.createElement('li');
-  
-          commentList.textContent = `${item.creation_date} ${item.username} : ${item.comment}`;
-          display.appendChild(commentList);
+        commentList.textContent = `${item.creation_date} ${item.username} : ${item.comment}`;
+        display.appendChild(commentList);
+      });
+    });
+  };
+
+  // likes-section
+  static addLikes = () => {
+    const icons = document.querySelectorAll(".fa-heart");
+    icons.forEach((icon) => {
+      icon.addEventListener("click", () => {
+        LikesApi.setLikes(Number(icon.id)).then(() => {
+          this.likes();
         });
       });
-    };
+    });
+  };
 
-
- 
+  static likes = () => {
+    LikesApi.getLikes().then((data) => {
+      data.forEach((item) => {
+        const icon = document.getElementById(`${item.item_id}`);
+        if (icon) {
+          icon.nextElementSibling.innerHTML = `${item.likes} likes`;
+        }
+      });
+    });
+  };
 }
