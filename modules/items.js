@@ -1,5 +1,6 @@
 import fetch from 'cross-fetch';
 import commentUrl from "../src/commentApi"
+import LikesApi from '../src/likesApi';
 
 export default class Movies {
   static url = "https://api.tvmaze.com/search/shows?q=space";
@@ -31,13 +32,14 @@ export default class Movies {
       <div class="each">
         <li>${item.show.name}</li>
         <div class="likes">
-         <i class="fa-regular fa-heart" ${item.show.id}></i>
+         <i class="fa-regular fa-heart" id="${item.show.id}"></i>
           <p>0 Likes</p>
         </div>
       </div>      
       <button id="${item.show.id}" class="button">Comments</button>`;
         movieContainer.appendChild(div);
       }
+  
     });
     const commentBtns = document.querySelectorAll(".button");
     commentBtns.forEach((btn) => {
@@ -146,5 +148,7 @@ export default class Movies {
         });
       });
     };
-    
+
+
+ 
 }

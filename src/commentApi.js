@@ -1,30 +1,30 @@
 export default class CommentApi {
+  static commentUrl =
+    "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/O9XLhIJZb65RrJXzf9ES/comments";
 
-  static commentUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/oGpNFV0VEbtyfofRPhmv/comments'
-
-    static getComments = async (id) => {
+  static getComments = async (id) => {
     const response = await fetch(`${this.commentUrl}?item_id=${id}`);
 
     const data = await response.json();
     return data;
   };
 
-    static setComments = async (id, username, comment) => {
-      const response = await fetch(this.commentUrl, {
-        method: 'post',
-        body: JSON.stringify({
-          item_id: id,
-          username,
-          comment,
-        }),
-        headers: {
-          'Content-type': 'application/JSON',
-        },
-      });
+  static setComments = async (id, username, comment) => {
+    const response = await fetch(this.commentUrl, {
+      method: "post",
+      body: JSON.stringify({
+        item_id: id,
+        username,
+        comment,
+      }),
+      headers: {
+        "Content-type": "application/JSON",
+      },
+    });
 
-      const data = await response.text();
-      return data;
-    };
+    const data = await response.text();
+    return data;
+  };
 
   static counterComments = (data) => {
     let count = 0;
