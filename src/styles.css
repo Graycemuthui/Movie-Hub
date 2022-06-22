@@ -31,11 +31,12 @@ body {
   box-shadow: 2px 5px 11px 5px rgba(29, 26, 26, 0.75);
 }
 
-#logo #logo-span {
+#logo #logo-span #logo-text {
   font-size: 2rem;
   color: grey;
   font-family: cursive;
 }
+
 #movieul {
   display: flex;
   justify-content: space-between;
