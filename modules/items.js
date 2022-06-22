@@ -3,7 +3,7 @@ import commentUrl from "../src/commentApi";
 import LikesApi from "../src/likesApi";
 
 export default class Movies {
-  static url = "https://api.tvmaze.com/search/shows?q=comedy";
+  static url = "https://api.tvmaze.com/search/shows?q=drama";
   static counterMovies = async () => {
     const response = await fetch(this.url);
     const data = await response.json();
