@@ -1,11 +1,6 @@
-
 import './styles.css';
 import LikesApi from './likesApi.js';
 import Movies from '../modules/items.js';
-import _ from "lodash";
-import "./styles.css";
-import LikesApi from "./likesApi";
-import Movies from "../modules/items";
 
 Movies.displayMovies();
 Movies.counterMovies();
