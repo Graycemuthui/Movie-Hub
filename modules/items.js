@@ -1,9 +1,9 @@
 import fetch from 'cross-fetch';
-import commentUrl from "../src/commentApi"
-import LikesApi from '../src/likesApi';
+import commentUrl from '../src/commentApi.js';
 
 export default class Movies {
-  static url = "https://api.tvmaze.com/search/shows?q=space";
+  static url = 'https://api.tvmaze.com/search/shows?q=space';
+
   static counterMovies = async () => {
     const response = await fetch(this.url);
     const data = await response.json();
@@ -20,13 +20,12 @@ export default class Movies {
   static displayMovies = async () => {
     const response = await fetch(this.url);
     const data = await response.json();
-    const movieContainer = document.querySelector(".movie-container");
-    const title = document.querySelector(".title");
+    const movieContainer = document.querySelector('.movie-container');
 
     data.forEach((item) => {
       if (item.show.image !== null) {
-        const div = document.createElement("div");
-        div.classList.add("each-movie");
+        const div = document.createElement('div');
+        div.classList.add('each-movie');
         div.innerHTML = `
         <img src="${item.show.image.medium}" alt="movie-image">
       <div class="each">
@@ -39,14 +38,13 @@ export default class Movies {
       <button id="${item.show.id}" class="button">Comments</button>`;
         movieContainer.appendChild(div);
       }
-  
     });
-    const commentBtns = document.querySelectorAll(".button");
+    const commentBtns = document.querySelectorAll('.button');
     commentBtns.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        const id = e.target.getAttribute("id");
+      btn.addEventListener('click', (e) => {
+        const id = e.target.getAttribute('id');
         const popup = data.filter(
-          (elem) => elem.show.id === parseInt(id, 10)
+          (elem) => elem.show.id === parseInt(id, 10),
         )[0].show;
         const popupDiv = `<div class="show-popup">
         <div class= "popups">
@@ -67,7 +65,7 @@ export default class Movies {
              
              <ul class="details">
                <li><p>Genre:</p> <span>${
-                 popup.genres.toString() || "Not Available"
+                 popup.genres.toString() || 'Not Available'
                }</span></li>
                <li><p>Language:</p> <span>${popup.language}</span></li>
                <li> <p>Premiered:</p> <span>${popup.premiered}</span></li>
@@ -100,27 +98,25 @@ export default class Movies {
         </div>
         </div>`;
 
-        document.body.insertAdjacentHTML("beforeend", popupDiv);
-        const closeBtn = document.querySelector("#delete");
+        document.body.insertAdjacentHTML('beforeend', popupDiv);
+        const closeBtn = document.querySelector('#delete');
         closeBtn.addEventListener('click', () => {
-          document.querySelector('.show-popup').remove()
-        })
+          document.querySelector('.show-popup').remove();
+        });
         this.commentCounter(id);
         this.displayComment(id);
       });
     });
-    
-  
   };
-  
-    // comment section 
+
+    // comment section
     static displayComment = (id) => {
       const username = document.querySelector('.username');
       const comment = document.querySelector('.comment');
       const addCommentBtn = document.querySelector('.add-comment');
       addCommentBtn.addEventListener('click', (e) => {
         e.preventDefault();
-  
+
         commentUrl.setComments(id, username.value, comment.value)
           .then((data) => {
             if (data === 'Created') {
@@ -130,9 +126,7 @@ export default class Movies {
             }
           });
       });
-
     }
-    
 
     static commentCounter = (id) => {
       commentUrl.getComments(id).then((data) => {
@@ -142,13 +136,10 @@ export default class Movies {
         display.innerHTML = '';
         data.forEach((item) => {
           const commentList = document.createElement('li');
-  
+
           commentList.textContent = `${item.creation_date} ${item.username} : ${item.comment}`;
           display.appendChild(commentList);
         });
       });
     };
-
-
- 
 }
