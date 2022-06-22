@@ -1,3 +1,9 @@
+### Screenshot
+
+- Here is a screenshot of the project.
+
+![Screenshot from 2022-06-23 01-33-40](https://user-images.githubusercontent.com/95374858/175166916-da523fe8-e75e-4af6-8f9f-95114705755d.png)
+
 ### javascript-capstone-project
 
 - This is a Microverse project that entails a movie website.
@@ -21,6 +27,10 @@
 - A text editor (e.g Visual Studio Code, Vim, Atom & Sublime.)
 - A web browser (e.g Chrome, Safari, Mozilla Firefox.)
 - Live Server which is a web extension that helps you to live reload feature for dynamic content (PHP, Node.js, ASPNET)
+
+### Deployment
+
+- Here is the live demo [link](https://graycemuthui.github.io/javascript-capstone-project/dist/)
 
 ### Setup
 
