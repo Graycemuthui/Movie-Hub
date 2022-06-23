@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
-import commentUrl from '../src/commentApi';
-import LikesApi from '../src/likesApi';
+import commentUrl from '../src/commentApi.js';
+import LikesApi from '../src/likesApi.js';
 
 export default class Movies {
   static url = 'https://api.tvmaze.com/search/shows?q=drama';
