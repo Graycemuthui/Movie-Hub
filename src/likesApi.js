@@ -6,11 +6,7 @@ export default class LikesApi {
     const res = await fetch(this.url);
     const data = await res.json();
     return data;
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> 89101b8a6a08a79248d4968d4baff61046b83329
 
   static setLikes = async (id) => {
     const res = await fetch(this.url, {
@@ -20,10 +16,5 @@ export default class LikesApi {
     });
     const data = await res.text();
     return data;
-<<<<<<< HEAD
-  }
-}
-=======
   };
 }
->>>>>>> 89101b8a6a08a79248d4968d4baff61046b83329
