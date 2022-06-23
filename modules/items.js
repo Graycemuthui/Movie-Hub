@@ -154,7 +154,7 @@ export default class Movies {
     const icons = document.querySelectorAll('.fa-heart');
     icons.forEach((icon) => {
       icon.addEventListener('click', () => {
-        LikesApi.setLikes(Number(icon.id)).then(() => {
+        LikesApi.setLikes(parseInt(icon.id, 10)).then(() => {
           this.likes();
         });
       });
