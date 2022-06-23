@@ -20,6 +20,10 @@ body {
   background-color: rgb(20, 9, 11);
 }
 
+.div {
+  margin: 0;
+}
+
 #logo {
   color: gray;
   border: 2px solid black;
@@ -295,6 +299,10 @@ footer {
     background-size: cover;
   }
 
+  .div {
+    margin: 0;
+  }
+
   .summary p {
     text-align: center;
     width: 12rem;
@@ -333,9 +341,9 @@ footer {
 
   h1.title {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 40px;
     color: rgb(221, 200, 13);
-    transform: translateY(170px);
+    transform: translateY(130px);
     background-image: url("../images/yellow-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
