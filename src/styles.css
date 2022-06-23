@@ -69,18 +69,6 @@ body {
   font-family: cursive;
 }
 
-.each li {
-  font-family: cursive, sans-serif;
-  font-size: 25px;
-}
-
-.details li {
-  list-style: none;
-  padding: 5px;
-  border: 1px solid grey;
-  box-shadow: 2px 5px 7px 5px rgba(29, 26, 26, 0.75);
-}
-
 #movieul li {
   list-style: none;
   margin-right: 20px;
