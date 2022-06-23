@@ -304,9 +304,9 @@ footer {
 
   h1.title {
     text-align: center;
-    padding-top: 8px;
+    padding-top: 10px;
     color: rgb(221, 200, 13);
-    transform: translateY(70px);
+    transform: translateY(90px);
     background-image: url("../images/yellow-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -335,7 +335,7 @@ footer {
     text-align: center;
     padding-top: 10px;
     color: rgb(221, 200, 13);
-    transform: translateY(140px);
+    transform: translateY(170px);
     background-image: url("../images/yellow-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
