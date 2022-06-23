@@ -16,5 +16,5 @@ export default class LikesApi {
     });
     const data = await res.text();
     return data;
-  };
+  }
 }
