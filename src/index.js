@@ -1,6 +1,6 @@
 import './styles.css';
-import LikesApi from './likesApi.js';
 
+import LikesApi from './likesApi.js';
 import Movies from '../modules/items.js';
 
 Movies.displayMovies();
