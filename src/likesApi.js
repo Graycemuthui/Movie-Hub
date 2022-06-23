@@ -12,7 +12,6 @@ export default class LikesApi {
     const res = await fetch(this.url, {
       method: 'post',
       headers: { 'content-type': 'application/json' },
-
       body: JSON.stringify({ item_id: id }),
     });
     const data = await res.text();
