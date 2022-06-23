@@ -5,11 +5,12 @@
 ![Screenshot from 2022-06-23 01-33-40](https://user-images.githubusercontent.com/95374858/175166916-da523fe8-e75e-4af6-8f9f-95114705755d.png)
 
 ### Video link
-- Here is the video [link](https://drive.google.com/file/d/1_x3jZLGweWn1ZHgr1YYG71eRbN95XvMC/view?usp=sharing) to see descriptions  
+
+- Here is the video [link](https://drive.google.com/file/d/1_x3jZLGweWn1ZHgr1YYG71eRbN95XvMC/view?usp=sharing) to see descriptions
 
 ### javascript-capstone-project
 
-- This is a Microverse project that entails a movie website.
+- This is a Microverse project that entails a Movie Hub website.
 
 ## Built With
 
