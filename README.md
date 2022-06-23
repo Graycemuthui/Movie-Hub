@@ -6,7 +6,7 @@
 
 ### Video link
 
-- Here is the video [link](https://drive.google.com/file/d/1_x3jZLGweWn1ZHgr1YYG71eRbN95XvMC/view?usp=sharing) to see descriptions
+- Here is the video [link](https://drive.google.com/file/d/18o6URFsgsOiioM_fo3XHjwhTjNlHzdqG/view?usp=sharing) to see descriptions
 
 ### javascript-capstone-project
 
