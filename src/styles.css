@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: beige;
+}
+
+#header-section {
+  position: fixed;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: 12%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(20, 9, 11);
+}
+
+.div {
+  margin: 0;
+}
+
+#logo {
+  color: gray;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px 0 15px 15px;
+  width: 15%;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 2px 5px 11px 5px rgba(29, 26, 26, 0.75);
+}
+
+#logo #logo-span #logo-text {
+  font-size: 2rem;
+  color: grey;
+  font-family: cursive;
+}
+
+.each li {
+  font-family: cursive, sans-serif;
+  font-size: 25px;
+}
+
+.details li {
+  list-style: none;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 2px 5px 7px 5px rgba(29, 26, 26, 0.75);
+}
+
+.display-comments li {
+  list-style-type: none;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.details li:hover {
+  background-color: rgb(93, 12, 12);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#movieul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: cursive;
+}
+
+#movieul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#movieul li a {
+  text-decoration: none;
+  border: 1px solid lightblue;
+  color: gray;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+
+#movieul li a:hover {
+  color: #333;
+  background-color: transparent;
+}
+
+h1.title {
+  text-align: center;
+  padding-top: 10px;
+  color: rgb(221, 200, 13);
+  transform: translateY(90px);
+  background-image: url("../images/leaves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10% 0 0 0;
+  margin: 0;
+  background-image: url("../images/background.jpg");
+  background-size: 120%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.each-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  border-radius: 1rem;
+}
+
+.each-movie img {
+  border-radius: 12px;
+}
+
+.each {
+  text-align: center;
+  line-height: 40px;
+  width: 21rem;
+  margin-top: 1rem;
+  color: rgb(187, 130, 130);
+  list-style-type: none;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(25, 54, 54);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(16, 39, 59);
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(4, 1, 1);
+  color: rgb(212, 208, 208);
+  text-align: center;
+}
+
+.popup {
+  background-color: red;
+  position: relative;
+  height: 90vh;
+  width: 60vw;
+  color: red;
+}
+
+.show-popup {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.popups {
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  top: 50%;
+  padding: 20px;
+  max-width: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow-y: auto;
+  height: 90vh;
+  background-color: black;
+  background-size: cover;
+}
+
+.firstPopUpDetails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closebtn {
+  display: flex;
+  justify-content: end;
+}
+
+.contents {
+  border-radius: 12px;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.popup-image img {
+  height: 200px;
+  width: 200px;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  padding-top: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.center {
+  text-align: center;
+  margin-top: 5px;
+  padding: 4px;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.username {
+  padding: 5px;
+}
+
+.summary p {
+  text-align: center;
+  width: 25rem;
+  color: rgb(232, 128, 128);
+  margin: 0 auto;
+}
+
+.comment {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 30% 0 0 0;
+    margin: 0;
+    background-image: url("../images/background.jpg");
+    background-size: 950%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  .popups {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: 50%;
+    padding: 20px;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+  }
+
+  .div {
+    margin: 0;
+  }
+
+  .summary p {
+    text-align: center;
+    width: 12rem;
+    color: rgb(232, 128, 128);
+    margin: 0 auto;
+  }
+
+  h1.title {
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(221, 200, 13);
+    transform: translateY(90px);
+    background-image: url("../images/yellow-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media screen and (max-device-width: 1024px) {
+  .movie-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 30% 0 0 0;
+    margin: 0;
+    background-image: url("../images/background.jpg");
+    background-size: 1000%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  h1.title {
+    text-align: center;
+    padding-top: 40px;
+    color: rgb(221, 200, 13);
+    transform: translateY(130px);
+    background-image: url("../images/yellow-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
